@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.wrapper{
+    max-width: 1080px;
+    margin: auto;
+}
+
+#home {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 10px;
+    /* background-color: #f5f5f5; */
+}
+
+.main-heading{
+    font-size: 1.3rem;
+    color: rgb(243, 70, 98);
+    font-weight: 300;
+}
+
+.main-heading2{
+    font-size: 2.4rem;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.home-image{
+    max-width: 60%;
+}
+
+.home-content{
+    max-width: 55%;
+}
+
+.person{
+    height: 400px;
+    width: 350px;
+}
+
+.home-content h2 {
+    color: rgb(243, 70, 98);
+}
+
+.home-content h1 {
+    margin-top: 20px;
+    font-size: 48px;
+}
+
+.home-content p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+#contact-us {
+    margin-top: 30px;
+    background-color: rgb(243, 70, 98);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+#contact-us:hover{
+    transform: scale(1.1);
+    background-color: rgb(252, 56, 89);
+}
+ 
+.names{
+    display: flex;
+}
+
+#services {
+    padding: 50px;
+}
+
+#company-growth {
+    margin-top: 50px;
+    padding: 50px;
+    /* background-color: #f5f5f5; */
+}
+
+.popup-form {
+    max-width: 30%;
+    height: 50%;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#contact-form {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-bottom: 5px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="checkbox"] {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact-form button {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: rgb(243, 70, 98)
+}
+
+#contact-form button:hover{
+    transform: scale(1.01);
+    background-color: rgb(252, 56, 89);
+}
+
+#close-form {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.services-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-head{
+    max-width: 40%;
+}
+
+.services-main-content{
+    margin-top: 30px;
+    max-width: 50%;
+    font-weight: 400;
+}
+
+.services-slider{
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.slides{
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.slides::-webkit-scrollbar{
+    display: none;
+}
+
+.slide{
+    flex: 0 0 auto;
+    margin-right: 40px;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 1;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+
+.slide {
+
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slide img {
+    height: 375px;
+    width: 220px;
+    display: block;
+}
+
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(243, 70, 98);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cards-heading{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 8px;
+}
+
+.cards-content{
+    margin-top: 10px;
+    font-size: 1rem;
+    padding: 8px;
+    text-align:center
+}
+
+.slide:hover .hover-content {
+    opacity: 1;
+}
+
+.hover-content h3 {
+    margin: 0;
+}
+
+.hover-content button {
+    background-color: white;
+    color: rgb(243, 70, 98);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: red;
+}
+
+.align{
+    text-align: center;
+}
+
+.project-sections{
+    display: flex;
+    gap: 20px;
+}
+
+.image-section{
+    width: 80%;
+}
+
+.proj-image{
+    height: 501px;
+    width: 700px;
+}
+
+.ind-card{
+    padding: 40px;
+    height: 167px;
+    background-color: #e9e3e3;
+    border: 1px solid #dfdada;
+}
+
+.ind-card:hover{
+    background-color: rgb(243, 70, 98);
+    color: white;
+    transition: all 0.3s;
+}
+
+.heading{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.content{
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+#company-growth{
+    height: 30rem;
+}
+
+.growth-stats{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.growth-card{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    /* border: 2px solid black; */
+    margin: auto;
+}
+
+.growth-card:hover{
+    background-color: white;
+    transform: scale(1.09);
+    box-shadow: 0.125rem 0.125rem 0.625rem #1f1f1f;;
+}
+
+.number{
+    font-size: 3rem;
+    font-weight: 400;
+    /* text-align: center; */
+}
+
+.growth-content{
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 300;
+}
+
+.icon{
+    margin-top: 8px;
+    color:rgb(243, 70, 98);
+    font-size: 1.2rem;   
+}
+
+.activee{
+    display: block;
+    transition: display 1s ease-in-out;
+}
+
+.proj-image:not(.activee){
+    display: none;
+}
